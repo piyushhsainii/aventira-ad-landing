@@ -1,0 +1,49 @@
+.section {
+  background: var(--navy);
+  padding: 7rem var(--page-padding);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.content {
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.icon {
+  width: 56px;
+  height: 56px;
+  border: 1px solid rgba(194, 160, 87, 0.35);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  color: var(--gold);
+}
+
+.icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.headline {
+  font-family: var(--serif);
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 400;
+  color: var(--white);
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
+}
+
+.body {
+  font-size: 0.95rem;
+  color: var(--white-dim);
+  line-height: 1.8;
+  max-width: 48ch;
+  margin: 0 auto;
+}

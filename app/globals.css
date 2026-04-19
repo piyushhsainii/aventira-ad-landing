@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'PalatinoLinotype';
+  src: url('/fonts/palatinolinotype_roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --navy: #101925;
+  --navy-mid: #1a2737;
+  --navy-light: #243347;
+  --gold: #c2a057;
+  --gold-light: #d4b878;
+  --gold-dim: rgba(194,160,87,0.15);
+  --gold-dim2: rgba(194,160,87,0.08);
+  --white: #f9f7f2;
+  --white-dim: rgba(249,247,242,0.7);
+  --white-faint: rgba(249,247,242,0.15);
+  --serif: 'PalatinoLinotype','Palatino Linotype','Palatino',Georgia,serif;
+  --sans: 'DM Sans',system-ui,sans-serif;
+  --max-width: 1200px;
+  --page-padding: clamp(1.5rem, 5vw, 5rem);
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--sans);
+  background: var(--navy);
+  color: var(--white);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.75s ease, transform 0.75s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,28 @@
+.footer {
+  background: #0a1018;
+  border-top: 1px solid rgba(194, 160, 87, 0.1);
+}
+
+.inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2.5rem var(--page-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+
+.note {
+  font-size: 0.75rem;
+  color: rgba(249, 247, 242, 0.3);
+}
