@@ -11,13 +11,17 @@ export default function Hero() {
     <section className={styles.hero}>
       <div className={styles.inner}>
         <div className={styles.left}>
-          <div className={styles.eyebrow} style={{ marginTop: "25px", marginBottom: "25px" }}> Aventira Admissions Consulting</div>
+          <div className={styles.eyebrow}>Admissions Consulting</div>
           <h1 className={styles.headline}>
             From <em>Who You Are</em><br />to Where You Belong
           </h1>
           <div className={styles.divider} />
           <p className={styles.tagline}>
             Test scores matter. Strategy, storytelling,<br />and positioning decide admits.
+          </p>
+          <p className={styles.stakes}>
+            Most students with strong grades still get rejected — not because they aren&apos;t
+            qualified, but because their application lacks strategy.
           </p>
           <p className={styles.body}>
             We help students build clear, differentiated applications that top colleges actually
@@ -26,7 +30,7 @@ export default function Hero() {
           </p>
           <div className={styles.actions}>
             <button className={styles.btnPrimary} onClick={() => scrollTo('cta-section')}>
-              Book Free Strategy Call
+              Build Your Student&apos;s Admissions Strategy
             </button>
             <button className={styles.btnGhost} onClick={() => scrollTo('results')}>
               See Student Results
@@ -51,15 +55,16 @@ export default function Hero() {
         <div className={styles.card}>
           <span className={styles.cardTag}>Complimentary Session</span>
           <h2 className={styles.cardTitle}>Free Admissions<br />Strategy Session</h2>
+          <p className={styles.cardUrgency}>Fall 2026 cohort is filling quickly</p>
           <ul className={styles.cardBullets}>
             <li>Identify your student&apos;s biggest admissions gaps</li>
             <li>Build a clear positioning strategy from the ground up</li>
             <li>Map out target schools and scholarship opportunities</li>
           </ul>
           <button className={styles.cardBtn} onClick={() => scrollTo('cta-section')}>
-            Schedule Your Call →
+            Build Your Student’s Admissions Strategy →
           </button>
-          <p className={styles.cardNote}>Limited availability — small roster each cycle</p>
+          <p className={styles.cardNote}>We only accept a limited number of students each cycle</p>
         </div>
       </div>
     </section>

@@ -17,12 +17,13 @@ export default function FinalCTA() {
             Let&apos;s Build Your Student&apos;s<br />
             <em>Admissions Strategy</em> — The Right Way
           </h2>
+          <p className={styles.urgency}>Fall 2026 cohort is filling quickly</p>
           <p className={styles.sub}>
             We only work with a limited number of families each cycle to maintain quality,
             responsiveness, and results. Spots for this cycle are filling now.
           </p>
           <button className={styles.btn} onClick={scrollToTop}>
-            Book Free Strategy Call
+            Start Your Strategy Session
           </button>
         </FadeSection>
       </div>

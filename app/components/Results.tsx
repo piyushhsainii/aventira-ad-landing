@@ -31,6 +31,10 @@ export default function Results() {
           <h2 className={styles.headline}>
             Proven Results That<br /><em>Speak for Themselves</em>
           </h2>
+          <p className={styles.whyLine}>
+            These outcomes aren&apos;t luck — they&apos;re the result of structured positioning,
+            narrative clarity, and disciplined execution.
+          </p>
           <p className={styles.sub}>
             Aventira is built around outcomes families can actually feel — stronger admits,
             more scholarships, and better long-term positioning.

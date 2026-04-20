@@ -5,29 +5,24 @@ const reviews = [
   {
     text: 'Jake built a structured, data-driven study plan that targeted my specific weaknesses. Beyond test prep, his guidance on essays was a major differentiator — he helped me refine my narrative and translate my experiences into compelling essays that actually stood out.',
     highlight: 'His approach combined strategy, accountability, and execution in a way that produced measurable results.',
-    name: 'Alan Ta',
-    outcome: 'Admitted · University of Michigan Ross School of Business',
+    outcome: 'Admitted · University of Michigan Ross School of Business, University of Notre Dame, Washington University in St. Louis, Duke University',
   },
   {
-    text: 'I believe Jake is the best return on investment out of all college consulting services.',
-    highlight: 'He is someone who puts in full effort in understanding you as a person and has the ability to tailor your application to convey who you are to the admissions team.',
-    name: 'Norwegian Wood',
-    outcome: 'Full-Cycle Client',
-    extra: 'He separates himself from the big firms that usually take hundreds of clients — his dedication to you is more than apparent.',
+    text: 'I believe this is the best return on investment out of all college consulting services. The expertise in the college admissions process truly shows through detailed revisions and commentary that help you execute what colleges want.',
+    highlight: 'He has a phenomenal grasp of what admissions readers want to see and will help you craft your story.',
+    outcome: 'Admitted · Vanderbilt',
   },
   {
     text: "Although I had fantastic grades, I did not know how to best structure my application in a way that would resonate with admissions committees.",
-    highlight: 'Jake kept me on a structured timeline that kept me focused, and this really helped ease my stress.',
-    name: 'Jonathan Nazaretian',
+    highlight: 'The structured timeline kept me focused and really helped ease my stress.',
+    extra: "I was admitted to my top choice, and I don't think I could've achieved this without this level of guidance.",
     outcome: 'Admitted · University of Chicago',
-    extra: "I was admitted to the University of Chicago, and I don't think I could've achieved this without his guidance.",
   },
   {
-    text: "Despite being one client, he made the time to help me refine and develop my application.",
-    highlight: 'Having Jake by my side raised my bar to the highest standards as to how college consulting services should be.',
-    name: 'Joshua Kellner',
-    outcome: 'Full-Cycle Client',
-    extra: 'Jake is a direct and genuine person — I give him my recommendation to anyone looking for admissions or essay help.',
+    text: "Despite being one client among many, the time and attention given to refining and developing my application was remarkable.",
+    highlight: 'This raised my bar to the highest standards as to how college consulting services should be.',
+    extra: 'I give my full recommendation to anyone looking for admissions guidance, essay help, or test prep.',
+    outcome: 'Admitted · Multiple · Indiana University Kelley School of Business with Scholarship',
   },
 ]
 
@@ -44,7 +39,7 @@ export default function Testimonials() {
 
         <div className={styles.grid}>
           {reviews.map((r, i) => (
-            <FadeSection key={r.name} delay={`${(i % 2) * 0.1}s`}>
+            <FadeSection key={i} delay={`${(i % 2) * 0.1}s`}>
               <div className={styles.card}>
                 <span className={styles.quoteMark}>&ldquo;</span>
                 <p className={styles.text}>
@@ -53,7 +48,6 @@ export default function Testimonials() {
                   {r.extra && <> {r.extra}</>}
                 </p>
                 <div className={styles.author}>
-                  <p className={styles.name}>{r.name}</p>
                   <p className={styles.outcome}>{r.outcome}</p>
                 </div>
               </div>

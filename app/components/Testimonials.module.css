@@ -1,6 +1,6 @@
 .section {
   background: #0d1620;
-  padding: 7rem var(--page-padding);
+  padding: 8rem var(--page-padding);
 }
 
 .inner {
@@ -83,20 +83,16 @@
 
 .author {
   margin-top: auto;
-}
-
-.name {
-  font-family: var(--serif);
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--gold);
+  padding-top: 1rem;
+  border-top: 1px solid rgba(194, 160, 87, 0.1);
 }
 
 .outcome {
-  font-size: 0.78rem;
-  color: rgba(249, 247, 242, 0.4);
-  letter-spacing: 0.04em;
-  margin-top: 0.2rem;
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--gold);
+  line-height: 1.5;
 }
 
 @media (max-width: 768px) {

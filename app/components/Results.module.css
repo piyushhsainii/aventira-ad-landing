@@ -1,6 +1,6 @@
 .section {
   background: var(--navy);
-  padding: 7rem var(--page-padding);
+  padding: 8rem var(--page-padding);
 }
 
 .inner {
@@ -9,7 +9,7 @@
 }
 
 .header {
-  margin-bottom: 4rem;
+  margin-bottom: 4.5rem;
 }
 
 .label {
@@ -36,6 +36,16 @@
   color: var(--gold);
 }
 
+.whyLine {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--gold);
+  max-width: 58ch;
+  line-height: 1.6;
+  margin-bottom: 0.75rem;
+}
+
 .sub {
   font-size: 0.95rem;
   color: var(--white-dim);
@@ -47,7 +57,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2px;
-  margin-bottom: 4rem;
+  margin-bottom: 4.5rem;
 }
 
 .statBox {
@@ -88,7 +98,7 @@
   flex-wrap: wrap;
   gap: 0.75rem;
   justify-content: center;
-  margin-bottom: 4rem;
+  margin-bottom: 4.5rem;
 }
 
 .pill {
@@ -100,13 +110,17 @@
   border: 1px solid rgba(194, 160, 87, 0.3);
   border-radius: 100px;
   background: rgba(194, 160, 87, 0.06);
-  transition: background 0.2s, border-color 0.2s;
+  transition:
+    background 0.2s,
+    border-color 0.2s,
+    transform 0.2s;
   cursor: default;
 }
 
 .pill:hover {
   background: var(--gold-dim);
   border-color: var(--gold);
+  transform: translateY(-1px);
 }
 
 .casesLabel {

@@ -1,6 +1,6 @@
 .section {
   background: var(--navy);
-  padding: 7rem var(--page-padding);
+  padding: 8rem var(--page-padding);
 }
 
 .inner {
@@ -29,6 +29,15 @@
 .icon svg {
   width: 22px;
   height: 22px;
+}
+
+.preHeadline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
 }
 
 .headline {

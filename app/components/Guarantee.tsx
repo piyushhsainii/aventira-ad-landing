@@ -11,6 +11,9 @@ export default function Guarantee() {
               <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
             </svg>
           </div>
+          <p className={styles.preHeadline}>
+            We don&apos;t get paid for effort. We get paid for outcomes.
+          </p>
           <h2 className={styles.headline}>
             Your Investment<br />Is Protected
           </h2>
