@@ -11,9 +11,12 @@ export default function Nav() {
     <nav className={styles.nav}>
       <div className={styles.inner}>
         <img src="/aventira-logo.png" alt="Aventira Logo" style={{ height: "75px", maxWidth: "200px", margin: "0", padding: "0 " }} />
-        <button className={styles.cta} onClick={() => scrollTo('cta-section')}>
+        <a
+          href="tel:+15136460333"
+          className={styles.cta}
+        >
           Book Strategy Call
-        </button>
+        </a>
       </div>
     </nav>
   )

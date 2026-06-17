@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import './globals.css'
+import MetaPixel from './components/Metapixel'
 
 export const metadata: Metadata = {
   title: 'Aventira Admissions Consulting',
@@ -15,6 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
       </head>
       <body>{children}</body>
+      <MetaPixel />
     </html>
   )
 }
