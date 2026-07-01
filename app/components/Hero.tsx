@@ -2,23 +2,21 @@
 
 import { useEffect, useRef } from 'react'
 import styles from './Hero.module.css'
+import { schedule, leadFormSubmit, ctaClick, viewContent } from '@/app/lib/pixel'
 
-/* ── Meta Pixel ─────────────────────────────────────────────── */
+/* ── Meta Pixel: Calendly integration ──────────────────────────
+   Note: we no longer use a local firePixel() helper — all events
+   now go through lib/pixel.ts so everything is tracked consistently
+   and shows up correctly segmented in Meta Events Manager.
+------------------------------------------------------------------ */
 declare global {
   interface Window {
-    fbq?: (...args: unknown[]) => void
     Calendly?: {
       initInlineWidget: (opts: {
         url: string
         parentElement: HTMLElement
       }) => void
     }
-  }
-}
-
-function firePixel(event: string, params?: Record<string, unknown>) {
-  if (typeof window !== 'undefined' && typeof window.fbq === 'function') {
-    window.fbq('track', event, params ?? {})
   }
 }
 
@@ -66,11 +64,12 @@ function CalendlyInline() {
         e.data?.event === 'calendly.event_scheduled' ||
         (typeof e.data === 'string' && e.data.includes('calendly.event_scheduled'))
       if (isBooking) {
-        firePixel('Schedule', {
-          content_name: 'Free Admissions Strategy Session',
+        // ✅ Primary conversion — booking confirmed via Calendly
+        schedule({ content_name: 'Free Admissions Strategy Session' })
+        leadFormSubmit({
+          content_name: 'Calendly Booking',
           content_category: 'Admissions Consulting',
         })
-        firePixel('Lead', { content_name: 'Calendly Booking' })
       }
     }
     window.addEventListener('message', onMessage)
@@ -88,6 +87,14 @@ function CalendlyInline() {
 
 /* ── Hero ───────────────────────────────────────────────────── */
 export default function Hero() {
+  // ViewContent fires once when the Hero (i.e. the homepage) mounts
+  useEffect(() => {
+    viewContent({
+      content_name: 'Admissions Consulting - Home',
+      content_category: 'Landing Page',
+    })
+  }, [])
+
   const scrollTo = (id: string) =>
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
 
@@ -125,13 +132,19 @@ export default function Hero() {
           <div className={styles.actions}>
             <button
               className={styles.btnPrimary}
-              onClick={() => scrollTo('hero-card')}
+              onClick={() => {
+                ctaClick('Build Your Student\'s Admissions Strategy', 'Hero')
+                scrollTo('hero-card')
+              }}
             >
               Build Your Student&apos;s Admissions Strategy
             </button>
             <button
               className={styles.btnGhost}
-              onClick={() => scrollTo('results')}
+              onClick={() => {
+                ctaClick('See Student Results', 'Hero')
+                scrollTo('results')
+              }}
             >
               See Student Results
             </button>
