@@ -43,7 +43,7 @@ export default function Testimonials() {
               <div className={styles.card}>
                 <span className={styles.quoteMark}>&ldquo;</span>
                 <p className={styles.text}>
-                  {r.text}{' '}
+                  {r.text}
                   <strong>{r.highlight}</strong>
                   {r.extra && <> {r.extra}</>}
                 </p>
